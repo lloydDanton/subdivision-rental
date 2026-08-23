@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
@@ -39,7 +39,7 @@ function PlaceholderPage({ title }) {
       <div className="placeholder-page__inner">
         <h1>{title}</h1>
         <p>This page is coming soon.</p>
-        <a href="/" className="placeholder-page__back">← Back to Home</a>
+        <Link to="/" className="placeholder-page__back">← Back to Home</Link>
       </div>
     </main>
   );
@@ -47,7 +47,7 @@ function PlaceholderPage({ title }) {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -59,6 +59,6 @@ export default function App() {
           <Route path="*" element={<PlaceholderPage title="404 — Page Not Found" />} />
         </Routes>
       </Layout>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
