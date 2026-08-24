@@ -30,3 +30,23 @@ Thumbs.db
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# SQLite database files — never commit the actual database
+*.db
+*.sqlite
+*.sqlite3
+
+# Supabase — never commit secrets or local generated files
+.env
+.env.local
+.env.*.local
+supabase/.branches
+supabase/.temp
+supabase/config.toml   # contains project ref — keep if non-sensitive, listed here for awareness
+
+# Supabase CLI local data (generated at runtime)
+supabase/.branches/
+supabase/.temp/
+
+# Never commit service role keys, JWT secrets, or DB passwords
+# (They belong only in server-side environment variables, never in source code)
