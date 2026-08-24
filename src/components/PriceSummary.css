@@ -1,0 +1,50 @@
+/* ── PriceSummary ───────────────────────────────────────────── */
+.price-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.price-summary__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  gap: 0.5rem;
+}
+
+.price-summary__row--rate {
+  color: var(--color-text-primary);
+}
+
+.price-summary__row--total {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.price-summary__label-with-info {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.price-summary__info {
+  font-size: 0.775rem;
+  color: var(--color-text-muted);
+}
+
+.price-summary__divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: 0.15rem 0;
+}
+
+.price-summary__hint {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin: 0;
+  text-align: center;
+  font-style: italic;
+}
