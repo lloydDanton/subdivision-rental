@@ -19,7 +19,7 @@
 --   profiles      : 9 rows  (1 admin, 3 owners, 5 guests)
 --   properties    : 8 rows  (various statuses)
 --   amenities     : 10 rows
---   property_amenities : 30 rows
+--   property_amenities : 63 rows
 --   bookings      : 10 rows (pending, confirmed, completed, cancelled)
 --   reviews       : 4 rows  (for completed bookings only)
 -- ============================================================

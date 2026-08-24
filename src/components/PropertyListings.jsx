@@ -30,7 +30,7 @@ export default function PropertyListings() {
   }, []);
 
   function handleViewProperty(id) {
-    navigate(`/property/${id}`);
+    navigate(`/properties/${id}`);
   }
 
   return (

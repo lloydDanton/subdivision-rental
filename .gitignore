@@ -50,3 +50,15 @@ supabase/.temp/
 
 # Never commit service role keys, JWT secrets, or DB passwords
 # (They belong only in server-side environment variables, never in source code)
+
+# C++ Build Output
+backend/build/
+backend/bin/
+*.exe
+*.obj
+*.o
+*.a
+*.lib
+*.dll
+CMakeCache.txt
+CMakeFiles/
