@@ -1,9 +1,6 @@
 /**
  * Mock property data for UI development.
  * Replace this file's consumption via propertyService.js when the C++ backend is ready.
- *
- * Each property matches the shape the PropertyCard component expects:
- * { id, title, location, image, rating, bedrooms, bathrooms, maxGuests, pricePerNight }
  */
 
 const mockProperties = [
@@ -12,88 +9,244 @@ const mockProperties = [
     title: "Modern Corner House with Garden",
     location: "Block 4, Greenfield Estates",
     image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1571055107559-3e67626fa8be?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=800&auto=format&fit=crop",
+    ],
     rating: 4.9,
     bedrooms: 4,
     bathrooms: 3,
     maxGuests: 8,
     pricePerNight: 4500,
+    description:
+      "Nestled on a prime corner lot in the heart of Greenfield Estates, this modern four-bedroom home offers the perfect blend of comfort and style. The open-plan living area flows seamlessly to a landscaped garden — ideal for morning coffee or evening gatherings. Fully furnished with contemporary pieces, high-speed Wi-Fi, and a fully equipped kitchen, everything you need is already here. The subdivision's gated entrance, 24-hour security, and nearby amenities make this an unbeatable choice for families and groups.",
+    amenities: [
+      "Free Wi-Fi", "Air conditioning", "Fully equipped kitchen", "Smart TV",
+      "Washing machine", "Private garden", "Covered parking (2 cars)",
+      "CCTV security", "Back-up generator", "BBQ grill",
+    ],
+    houseRules: [
+      "Check-in after 2:00 PM", "Check-out before 12:00 PM",
+      "No smoking inside the property", "No parties or events",
+      "Pets not allowed", "Quiet hours: 10:00 PM – 7:00 AM",
+      "Keep premises clean and tidy",
+    ],
   },
   {
     id: 2,
     title: "Cozy Bungalow Near Clubhouse",
     location: "Block 7, Sunrise Village",
     image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1615873968403-89e068629265?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&auto=format&fit=crop",
+    ],
     rating: 4.7,
     bedrooms: 3,
     bathrooms: 2,
     maxGuests: 6,
     pricePerNight: 3200,
+    description:
+      "Wake up just steps away from the Sunrise Village clubhouse, swimming pool, and jogging path. This well-maintained bungalow is designed for easy, relaxed living — bright interiors, cheerful décor, and a covered patio perfect for al fresco breakfasts. Three comfortable bedrooms sleep up to six guests, and the fully-fitted kitchen means you can cook or simply store your groceries. Short-term and weekend stays are warmly welcomed.",
+    amenities: [
+      "Free Wi-Fi", "Air conditioning", "Fully equipped kitchen", "Smart TV",
+      "Washing machine", "Covered patio", "Parking (1 car)",
+      "Clubhouse access", "Swimming pool access", "Jogging path access",
+    ],
+    houseRules: [
+      "Check-in after 2:00 PM", "Check-out before 12:00 PM",
+      "No smoking inside the property", "No parties or events",
+      "Pets allowed (small dogs only, with prior approval)",
+      "Quiet hours: 10:00 PM – 7:00 AM",
+    ],
   },
   {
     id: 3,
     title: "Spacious Family Home with Pool",
     location: "Block 2, Palm Ridge Subdivision",
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1576941089067-2de3c901e126?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&auto=format&fit=crop",
+    ],
     rating: 4.8,
     bedrooms: 5,
     bathrooms: 4,
     maxGuests: 10,
     pricePerNight: 6800,
+    description:
+      "The ultimate family retreat in Palm Ridge — a sprawling five-bedroom residence with a private pool, spacious living and dining areas, and a gourmet kitchen built for big gatherings. Each of the five bedrooms has its own en-suite bathroom, and the master suite features a walk-in closet and soaking tub. Outside, the pool deck with sun loungers and an outdoor dining set makes every evening feel like a vacation.",
+    amenities: [
+      "Free Wi-Fi", "Air conditioning (all rooms)", "Private swimming pool",
+      "Gourmet kitchen", "Smart TV (living room + master)", "Washing machine & dryer",
+      "Outdoor dining area", "Sun loungers", "Covered parking (3 cars)",
+      "Back-up generator", "CCTV security", "BBQ grill",
+    ],
+    houseRules: [
+      "Check-in after 3:00 PM", "Check-out before 12:00 PM",
+      "No smoking inside the property", "No parties without prior approval",
+      "Children must be supervised near the pool", "Pets not allowed",
+      "Quiet hours: 10:00 PM – 8:00 AM", "Maximum 10 guests at all times",
+    ],
   },
   {
     id: 4,
     title: "Minimalist Townhouse with Parking",
     location: "Block 11, Serene Heights",
     image: "https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=800&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&auto=format&fit=crop",
+    ],
     rating: 4.6,
     bedrooms: 3,
     bathrooms: 2,
     maxGuests: 5,
     pricePerNight: 2800,
+    description:
+      "Clean lines and a calm palette define this elegant townhouse in Serene Heights. Designed for the modern traveler who values simplicity and function, the three-bedroom layout is thoughtfully arranged across two floors. The ground floor features an open kitchen and dining space that opens to a small private courtyard, while the upper floor bedrooms are quiet and well-insulated. Ideal for workcations.",
+    amenities: [
+      "Free Wi-Fi", "Air conditioning", "Fully equipped kitchen", "Smart TV",
+      "Washing machine", "Private courtyard", "Dedicated parking (1 car)",
+      "Work desk", "CCTV security",
+    ],
+    houseRules: [
+      "Check-in after 2:00 PM", "Check-out before 11:00 AM",
+      "No smoking on the property", "No parties or events",
+      "Pets not allowed", "Quiet hours: 9:00 PM – 8:00 AM",
+    ],
   },
   {
     id: 5,
     title: "Elegant Two-Storey House",
     location: "Block 1, Crestview Homes",
     image: "https://images.unsplash.com/photo-1598228723793-52759bba239c?w=800&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1598228723793-52759bba239c?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1556020685-ae41abfc9365?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&auto=format&fit=crop",
+    ],
     rating: 5.0,
     bedrooms: 4,
     bathrooms: 3,
     maxGuests: 8,
     pricePerNight: 5200,
+    description:
+      "Crestview Homes' finest — a meticulously maintained two-storey residence that combines classic architecture with premium modern interiors. The grand living area features high ceilings, large picture windows, and statement furniture. The gourmet kitchen is stocked with quality appliances, and the four spacious bedrooms each offer plush bedding, ample storage, and air conditioning. Rated 5.0 by every previous guest.",
+    amenities: [
+      "Free Wi-Fi (fiber)", "Air conditioning (all rooms)", "Gourmet kitchen",
+      "Home theatre setup", "Smart TV (all rooms)", "Washing machine & dryer",
+      "Covered parking (2 cars)", "Back-up generator", "CCTV security",
+      "Garden terrace", "BBQ grill", "Iron & ironing board",
+    ],
+    houseRules: [
+      "Check-in after 2:00 PM", "Check-out before 12:00 PM",
+      "No smoking inside the property", "No parties or events",
+      "Pets not allowed", "Quiet hours: 10:00 PM – 7:00 AM",
+      "Please remove shoes at the entrance",
+    ],
   },
   {
     id: 6,
     title: "Charming Studio Loft",
     location: "Block 9, The Enclave",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1554995207-c18c203602cb?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800&auto=format&fit=crop",
+    ],
     rating: 4.5,
     bedrooms: 1,
     bathrooms: 1,
     maxGuests: 2,
     pricePerNight: 1500,
+    description:
+      "Perfect for couples or solo travelers, this charming studio loft inside The Enclave is your cozy urban escape within a quiet subdivision. The open-plan living and sleeping area is smartly designed to maximize every square meter — think built-in storage, a queen-sized loft bed, and a compact but fully functional kitchen. Floor-to-ceiling windows flood the space with natural light.",
+    amenities: [
+      "Free Wi-Fi", "Air conditioning", "Kitchenette", "Smart TV",
+      "Work desk", "Iron & ironing board", "Parking (1 car)", "CCTV security",
+    ],
+    houseRules: [
+      "Check-in after 2:00 PM", "Check-out before 11:00 AM",
+      "No smoking on the property", "No parties or events",
+      "Strictly 2 guests maximum", "Pets not allowed",
+      "Quiet hours: 10:00 PM – 8:00 AM",
+    ],
   },
   {
     id: 7,
     title: "Corner Lot Villa with Lanai",
     location: "Block 3, Lakeview Residences",
     image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1556020685-ae41abfc9365?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?w=800&auto=format&fit=crop",
+    ],
     rating: 4.8,
     bedrooms: 4,
     bathrooms: 3,
     maxGuests: 9,
     pricePerNight: 5800,
+    description:
+      "Set on a generous corner lot in the sought-after Lakeview Residences, this villa offers expansive indoor-outdoor living anchored by a beautiful covered lanai overlooking the garden. Four well-appointed bedrooms comfortably sleep up to nine guests. The wrap-around garden is fully enclosed — perfect for children and pets. Mornings are best enjoyed on the lanai with coffee, and evenings call for the built-in BBQ.",
+    amenities: [
+      "Free Wi-Fi", "Air conditioning (all rooms)", "Fully equipped kitchen",
+      "Smart TV", "Washing machine", "Covered lanai", "Wraparound garden",
+      "BBQ grill", "Covered parking (2 cars)", "Back-up generator",
+      "Pet-friendly (with prior approval)",
+    ],
+    houseRules: [
+      "Check-in after 2:00 PM", "Check-out before 12:00 PM",
+      "No smoking inside the property",
+      "Small and medium pets allowed with prior approval",
+      "No parties without prior approval",
+      "Quiet hours: 10:00 PM – 7:00 AM", "Maximum 9 guests at all times",
+    ],
   },
   {
     id: 8,
     title: "Quiet Garden Cottage",
     location: "Block 6, Verdana Suites",
     image: "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?w=800&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=800&auto=format&fit=crop",
+    ],
     rating: 4.7,
     bedrooms: 2,
     bathrooms: 1,
     maxGuests: 4,
     pricePerNight: 2200,
+    description:
+      "Tucked away in the tranquil Verdana Suites, this two-bedroom garden cottage is a breath of fresh air. Lush greenery surrounds the property on all sides, and the private garden is your own personal sanctuary for reading, yoga, or simply unwinding. The interior is warm and inviting — natural materials, soft lighting, and a well-equipped kitchen. Ideal for small families or couples seeking peace and quiet.",
+    amenities: [
+      "Free Wi-Fi", "Air conditioning", "Fully equipped kitchen", "Smart TV",
+      "Washing machine", "Private garden", "Outdoor seating area",
+      "Parking (1 car)", "CCTV security",
+    ],
+    houseRules: [
+      "Check-in after 2:00 PM", "Check-out before 11:00 AM",
+      "No smoking on the property", "No parties or events",
+      "Pets not allowed", "Quiet hours: 9:00 PM – 8:00 AM",
+    ],
   },
 ];
 
