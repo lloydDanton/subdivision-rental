@@ -1,6 +1,7 @@
 import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import HomePage from './pages/HomePage';
 import PropertyDetails from './pages/PropertyDetails';
 import Login from './pages/Login';
@@ -49,6 +50,7 @@ function NotFoundPage() {
 export default function App() {
   return (
     <HashRouter>
+      <ScrollToTop />
       <Layout>
         <Routes>
           {/* Phase 1 */}

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import PropertyCard from './PropertyCard';
 import { getAllProperties } from '../services/propertyService';
 import './PropertyListings.css';
@@ -48,9 +48,9 @@ export default function PropertyListings() {
               ready for your stay.
             </p>
           </div>
-          <a href="/browse" className="listings__see-all" aria-label="See all available properties">
+          <Link to="/browse" className="listings__see-all" aria-label="See all available properties">
             See all properties →
-          </a>
+          </Link>
         </div>
 
         {/* Loading skeleton */}
