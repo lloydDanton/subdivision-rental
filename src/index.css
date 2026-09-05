@@ -1,77 +1,109 @@
-/* ═══════════════════════════════════════════════════════════════
-   index.css — Global styles & design tokens
-   SubdivisionStay
-   ═══════════════════════════════════════════════════════════════ */
+/* ==========================================================================
+   Tagaytay Country Homes 2 — Design System & Global Styles
+   ========================================================================== */
 
-/* ── Design tokens ───────────────────────────────────────────── */
 :root {
-  /* Colors */
-  --color-primary:       #2563eb;
-  --color-primary-dark:  #1d4ed8;
-  --color-primary-light: #eff6ff;
-
-  --color-bg:            #f8f9fb;
-  --color-surface:       #f1f5f9;
-  --color-border:        #e2e8f0;
-
-  --color-text-primary:   #0f172a;
-  --color-text-secondary: #64748b;
-  --color-text-muted:     #94a3b8;
+  /* Brand Palette */
+  --color-primary: #173F35;      /* Deep Forest Pine */
+  --color-primary-dark: #0f2c25;
+  --color-secondary: #4F735D;    /* Highland Moss */
+  --color-secondary-light: #628c73;
+  --color-background: #F7F6F1;   /* Soft Warm Limestone */
+  --color-surface: #FFFFFF;      /* Clean White */
+  --color-text: #202522;         /* Dark Slate Pine */
+  --color-text-muted: #5F6B64;   /* Muted Slate */
+  --color-accent: #B79B5B;       /* Warm Highland Brass / Gold */
+  --color-accent-hover: #9e844a;
+  --color-white: #FFFFFF;
+  --color-border: #E5E4DC;
+  --color-border-light: #ECEBE3;
+  
+  /* Status */
+  --color-success: #2A6B4E;
+  --color-danger: #9B3B3B;
+  --color-warning: #C27D26;
 
   /* Typography */
-  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
-               'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   /* Spacing */
-  --space-xs:  0.5rem;
-  --space-sm:  0.75rem;
-  --space-md:  1.5rem;
-  --space-lg:  2rem;
-  --space-xl:  3rem;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
 
-  /* Border radius */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
+  /* Container */
+  --container-max-width: 1240px;
+  --container-padding: 32px;
 
-  /* Layout */
-  --max-width: 1280px;
+  /* Shadows */
+  --shadow-subtle: 0 1px 3px rgba(23, 63, 53, 0.05), 0 1px 2px rgba(23, 63, 53, 0.03);
+  --shadow-card: 0 4px 16px -2px rgba(23, 63, 53, 0.06), 0 2px 6px -1px rgba(23, 63, 53, 0.04);
+  --shadow-hover: 0 10px 24px -4px rgba(23, 63, 53, 0.1), 0 4px 8px -2px rgba(23, 63, 53, 0.05);
+  --shadow-dropdown: 0 12px 28px rgba(23, 63, 53, 0.12), 0 4px 10px rgba(23, 63, 53, 0.04);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Radius (Subtle & Elegant, not overly rounded) */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
 }
 
-/* ── Reset ───────────────────────────────────────────────────── */
-*,
-*::before,
-*::after {
+/* Responsive Container Padding */
+@media (max-width: 1024px) {
+  :root {
+    --container-padding: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --container-padding: 16px;
+  }
+}
+
+/* ==========================================================================
+   CSS Reset & Base
+   ========================================================================== */
+
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* ── Base ────────────────────────────────────────────────────── */
 html {
-  scroll-behavior: smooth;
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  font-family: var(--font-sans);
   font-size: 16px;
-  line-height: 1.6;
-  color: var(--color-text-primary);
-  background: var(--color-bg);
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ── Typography ──────────────────────────────────────────────── */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  line-height: 1.25;
-  color: var(--color-text-primary);
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-p {
-  line-height: 1.65;
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
 }
 
 a {
@@ -79,68 +111,190 @@ a {
   text-decoration: none;
 }
 
-/* ── Images & media ─────────────────────────────────────────── */
-img,
-video {
-  max-width: 100%;
-  display: block;
-}
-
-/* ── Forms ───────────────────────────────────────────────────── */
-button,
-input,
-select,
-textarea {
-  font-family: inherit;
-  font-size: inherit;
-}
-
-button {
-  cursor: pointer;
-}
-
-input:focus,
-button:focus-visible,
-a:focus-visible,
-select:focus-visible,
-textarea:focus-visible {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
-}
-
-/* Remove default focus ring where we handle it ourselves */
-input:focus:not(:focus-visible),
-button:focus:not(:focus-visible) {
-  outline: none;
-}
-
-/* ── Lists ───────────────────────────────────────────────────── */
-ul,
-ol {
+ul, ol {
   list-style: none;
 }
 
-/* ── Scrollbar (WebKit) ─────────────────────────────────────── */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+/* ==========================================================================
+   Typography Hierarchy
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
 }
 
-::-webkit-scrollbar-track {
-  background: var(--color-surface);
+h1 {
+  font-size: clamp(2.25rem, 4vw + 1rem, 3.5rem);
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--color-border);
-  border-radius: 4px;
+h2 {
+  font-size: clamp(1.85rem, 2.5vw + 1rem, 2.6rem);
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-text-muted);
+h3 {
+  font-size: clamp(1.35rem, 1.5vw + 0.8rem, 1.85rem);
 }
 
-/* ── Selection ───────────────────────────────────────────────── */
-::selection {
-  background: var(--color-primary-light);
-  color: var(--color-primary-dark);
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-accent);
+  margin-bottom: var(--space-xs);
+}
+
+/* ==========================================================================
+   Layout Containers
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.section-spacing {
+  padding-top: clamp(48px, 6vw, 96px);
+  padding-bottom: clamp(48px, 6vw, 96px);
+}
+
+/* Accessibility Skip Link */
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 16px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 10px 18px;
+  z-index: 9999;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+/* ==========================================================================
+   Button Primitives
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  transform: translateY(-1px);
+}
+
+.btn--secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn--secondary:hover {
+  background-color: rgba(23, 63, 53, 0.05);
+  transform: translateY(-1px);
+}
+
+.btn--accent {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border-color: var(--color-accent);
+}
+
+.btn--accent:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+
+.btn--outline-white {
+  background-color: transparent;
+  color: var(--color-white);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.btn--outline-white:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: var(--color-white);
+}
+
+/* ==========================================================================
+   Section Heading Utility
+   ========================================================================== */
+
+.section-header {
+  margin-bottom: clamp(32px, 4vw, 56px);
+}
+
+.section-header--center {
+  text-align: center;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header p {
+  margin-top: var(--space-sm);
+  font-size: 1.0625rem;
+}
+
+/* ==========================================================================
+   Prefers Reduced Motion
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

@@ -1,0 +1,143 @@
+/* ==========================================================================
+   AuthPortal Styles
+   ========================================================================== */
+
+.auth-portal {
+  display: flex;
+  justify-content: center;
+}
+
+.auth-portal__card {
+  width: 100%;
+  max-width: 520px;
+  background-color: var(--color-white);
+  padding: clamp(28px, 4vw, 44px);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+
+.auth-portal__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(79, 115, 93, 0.12);
+  color: var(--color-primary);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 18px;
+}
+
+.auth-portal__card h2 {
+  font-size: 1.65rem;
+  margin-bottom: 8px;
+}
+
+.auth-portal__desc {
+  font-size: 0.9375rem;
+  margin-bottom: 24px;
+}
+
+.auth-portal__alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background-color: #E8F3ED;
+  border: 1px solid #BFE0CD;
+  color: var(--color-success);
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 20px;
+  font-size: 0.875rem;
+}
+
+.auth-portal__alert strong {
+  display: block;
+}
+
+.auth-portal__alert p {
+  color: var(--color-success);
+  font-size: 0.8125rem;
+  margin-top: 2px;
+}
+
+.auth-portal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.auth-portal__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.auth-portal__field-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.auth-portal__field-header a {
+  font-size: 0.8125rem;
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+.auth-portal__field label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.auth-portal__input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.auth-portal__icon {
+  position: absolute;
+  left: 14px;
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.auth-portal__input-wrapper input {
+  width: 100%;
+  padding: 12px 14px 12px 42px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9375rem;
+  background-color: #FAFAFA;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+}
+
+.auth-portal__input-wrapper input:focus {
+  outline: none;
+  background-color: #FFFFFF;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(23, 63, 53, 0.12);
+}
+
+.auth-portal__btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 6px;
+  font-size: 1rem;
+}
+
+.auth-portal__footer {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}

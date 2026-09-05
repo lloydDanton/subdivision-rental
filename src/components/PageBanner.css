@@ -1,0 +1,71 @@
+/* ==========================================================================
+   PageBanner Styles
+   ========================================================================== */
+
+.page-banner {
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 60%, #214f44 100%);
+  color: var(--color-white);
+  padding-top: calc(80px + clamp(36px, 5vw, 64px));
+  padding-bottom: clamp(36px, 5vw, 60px);
+  position: relative;
+  overflow: hidden;
+  border-bottom: 3px solid var(--color-accent);
+}
+
+.page-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 80% 20%, rgba(183, 155, 91, 0.15) 0%, transparent 50%),
+                    linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.25));
+  pointer-events: none;
+}
+
+.page-banner__container {
+  position: relative;
+  z-index: 1;
+}
+
+.page-banner__breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 0.8125rem;
+  color: #B5C4BC;
+  margin-bottom: 12px;
+}
+
+.page-banner__crumb-link {
+  color: #B5C4BC;
+  transition: color var(--transition-fast);
+}
+
+.page-banner__crumb-link:hover {
+  color: #F7E7B4;
+}
+
+.page-banner__crumb-sep {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.page-banner__crumb-current {
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.page-banner__title {
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3vw + 1rem, 2.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.page-banner__subtitle {
+  color: #D3DDD7;
+  font-size: clamp(1rem, 1.2vw + 0.5rem, 1.125rem);
+  max-width: 680px;
+  line-height: 1.6;
+}

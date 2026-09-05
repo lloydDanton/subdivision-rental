@@ -1,13 +1,19 @@
+import React from 'react';
 import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+
+// Pages
 import HomePage from './pages/HomePage';
-import PropertyDetails from './pages/PropertyDetails';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Booking from './pages/Booking';
-import Dashboard from './pages/Dashboard';
+import AboutPage from './pages/AboutPage';
+import CommunityPage from './pages/CommunityPage';
+import NewsPage from './pages/NewsPage';
+import DownloadsPage from './pages/DownloadsPage';
+import ContactPage from './pages/ContactPage';
+import PrivacyPage from './pages/PrivacyPage';
+import LoginPage from './pages/LoginPage';
+
 import './App.css';
 
 function Layout({ children }) {
@@ -17,21 +23,9 @@ function Layout({ children }) {
         Skip to main content
       </a>
       <Navbar />
-      {children}
+      <div className="app-content">{children}</div>
       <Footer />
     </div>
-  );
-}
-
-function PlaceholderPage({ title }) {
-  return (
-    <main id="main-content" className="placeholder-page">
-      <div className="placeholder-page__inner">
-        <h1>{title}</h1>
-        <p>This page is coming soon.</p>
-        <Link to="/" className="placeholder-page__back">← Back to Home</Link>
-      </div>
-    </main>
   );
 }
 
@@ -40,8 +34,8 @@ function NotFoundPage() {
     <main id="main-content" className="placeholder-page">
       <div className="placeholder-page__inner">
         <h1>404 — Page Not Found</h1>
-        <p>The page you&apos;re looking for doesn&apos;t exist.</p>
-        <Link to="/" className="placeholder-page__back">← Back to Home</Link>
+        <p>The page you are looking for does not exist or has been relocated.</p>
+        <Link to="/" className="btn btn--primary">← Return to Homepage</Link>
       </div>
     </main>
   );
@@ -53,22 +47,15 @@ export default function App() {
       <ScrollToTop />
       <Layout>
         <Routes>
-          {/* Phase 1 */}
-          <Route path="/"                element={<HomePage />} />
-
-          {/* Phase 2 */}
-          <Route path="/properties/:id"  element={<PropertyDetails />} />
-          <Route path="/booking/:id"     element={<Booking />} />
-          <Route path="/login"           element={<Login />} />
-          <Route path="/register"        element={<Register />} />
-          <Route path="/dashboard"       element={<Dashboard />} />
-
-          {/* Phase 3 placeholders */}
-          <Route path="/browse"          element={<PlaceholderPage title="Browse Properties" />} />
-          <Route path="/become-a-host"   element={<PlaceholderPage title="Become a Host" />} />
-
-          {/* Catch-all */}
-          <Route path="*"                element={<NotFoundPage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/community" element={<CommunityPage />} />
+          <Route path="/news" element={<NewsPage />} />
+          <Route path="/downloads" element={<DownloadsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Layout>
     </HashRouter>
